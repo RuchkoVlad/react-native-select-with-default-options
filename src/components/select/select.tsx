@@ -37,6 +37,7 @@ const SelectComponent = <T,>(props: SelectProps<T>, ref: ForwardedRef<SelectRef<
         clearable = true,
         closeOptionsListOnSelect = true,
         defaultOption,
+        defaultOptions,
         disabled = false,
         hasBackdrop = true,
         hideArrow = false,
@@ -85,7 +86,7 @@ const SelectComponent = <T,>(props: SelectProps<T>, ref: ForwardedRef<SelectRef<
     const [state, dispatch] = useReducer<
         Reducer<State<T>, ActionType<T>>,
         CreateInitialStateType<T>
-    >(reducer, { options, searchable, animation, defaultOption }, createInitialState);
+    >(reducer, { options, searchable, animation, defaultOption, defaultOptions  }, createInitialState);
 
     const {
         isOpened,

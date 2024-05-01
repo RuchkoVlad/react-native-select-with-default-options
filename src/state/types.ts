@@ -54,6 +54,7 @@ export type Position = {
 export type State<T = unknown> = {
     isOpened: boolean;
     selectedOption: OptionType<T> | OptionType<T>[] | null;
+    selectedOptions: OptionType<T>[] | null;
     selectedOptionIndex: number | number[];
     optionsData: OptionsType<T>;
     openedPosition: Position;
@@ -69,4 +70,5 @@ export type CreateInitialStateType<T> = {
     animation: boolean | number;
 
     defaultOption: OptionType<T> | undefined;
+    defaultOptions: OptionType<T>[] | undefined;
 };

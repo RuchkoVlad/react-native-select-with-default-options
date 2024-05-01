@@ -73,6 +73,7 @@ export interface SelectProps<T = unknown> {
      *  An object that represents the default option for a `Select`.
      */
     defaultOption?: OptionType<T>;
+    defaultOptions?: OptionType<T>[];
 
     /**
      *  Disable a `Select` pressable.
