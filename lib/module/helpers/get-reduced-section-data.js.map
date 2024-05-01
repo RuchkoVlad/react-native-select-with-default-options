@@ -1,0 +1,1 @@
+{"version":3,"names":["getReducedSectionData","data","reduce","prev","current"],"sourceRoot":"../../../src","sources":["helpers/get-reduced-section-data.ts"],"mappings":"AAEA,OAAO,MAAMA,qBAAqB,GAAOC,IAA4B,IACjEA,IAAI,CAACC,MAAM,CAAkB,CAACC,IAAI,EAAEC,OAAO,KAAK,CAAC,GAAGD,IAAI,EAAE,GAAGC,OAAO,CAACH,IAAI,CAAC,EAAE,EAAE,CAAC","ignoreList":[]}
