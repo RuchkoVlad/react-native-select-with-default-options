@@ -50,6 +50,7 @@ type Styles = {
 const styles = StyleSheet.create<Styles>({
     text: {
         fontSize: FONT_SIZE,
+        marginRight: 10,
     },
     disabled: {
         backgroundColor: COLORS.DISABLED,
