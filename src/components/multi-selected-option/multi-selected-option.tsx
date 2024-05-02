@@ -1,20 +1,21 @@
 import React, { memo } from 'react';
 import isEqual from 'react-fast-compare';
 import type { TextStyle, ViewStyle } from 'react-native';
-import { Pressable, StyleSheet, Text } from 'react-native';
+import {Image, Pressable, StyleSheet, Text} from 'react-native';
 
 import { COLORS, FONT_SIZE, PRESSED_STYLE } from '../../constants';
 
 import type { MultiSelectedOptionProps } from './multi-selected-option.types';
+const iconSource = require('./../../assets/icons/x.png');
 
 export const MultiSelectedOption = memo(
     <T,>({
-        option,
-        multiSelectedCustomStyles,
-        optionWidth,
-        onPressRemove,
-        disabled,
-    }: MultiSelectedOptionProps<T>) => {
+             option,
+             multiSelectedCustomStyles,
+             optionWidth,
+             onPressRemove,
+             disabled,
+         }: MultiSelectedOptionProps<T>) => {
         return (
             <Pressable
                 accessibilityLabel={
@@ -29,6 +30,10 @@ export const MultiSelectedOption = memo(
                 disabled={disabled}
                 onPress={() => (onPressRemove ? onPressRemove(option) : null)}
             >
+                <Image
+                    source={iconSource}
+                    style={{width: 15, height: 15, tintColor: 'red', marginRight: 2}}
+                />
                 <Text
                     numberOfLines={1}
                     style={[
@@ -37,7 +42,7 @@ export const MultiSelectedOption = memo(
                         {
                             color:
                                 StyleSheet.flatten(multiSelectedCustomStyles?.text)?.color ??
-                                COLORS.BLACK,
+                                COLORS.WHITE,
                         },
                     ]}
                 >
@@ -60,15 +65,17 @@ const styles = StyleSheet.create<Styles>({
         textAlign: 'left',
     },
     multiSelectedOption: {
-        alignItems: 'flex-start',
+        alignItems: 'center',
         justifyContent: 'center',
         display: 'flex',
+        flexDirection: 'row',
         borderRadius: 4,
-        backgroundColor: COLORS.DISABLED,
-        borderWidth: 1,
-        borderColor: COLORS.BLACK,
-        margin: 2,
-        paddingHorizontal: 5,
+        height: 30,
+        backgroundColor: '#2F64FF',
+        marginTop: 10,
+        marginRight: 2,
+        paddingHorizontal: 3,
+        paddingLeft: 10,
     },
 });
 
