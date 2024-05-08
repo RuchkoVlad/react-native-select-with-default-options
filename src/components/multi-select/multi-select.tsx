@@ -39,7 +39,7 @@ export const MultiSelect = <T,>({ selectedOptions }: MultiSelectProps<T>) => {
     };
 
     return (
-        <ScrollView scrollEnabled={!disabled} style={styles.container} horizontal>
+        <ScrollView scrollEnabled={!disabled} style={styles.container}>
             {isSearchable && <SelectInput />}
             {resolveSelectedOptionsList()}
         </ScrollView>

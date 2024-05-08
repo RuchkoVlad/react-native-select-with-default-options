@@ -113,7 +113,7 @@ const styles = StyleSheet.create<Styles>({
     },
     container: {
         width: '100%',
-        height: 40,
+        flexGrow: 1,
         flexDirection: 'row',
         borderRadius: SHAPE,
         borderWidth: BORDER_WIDTH,

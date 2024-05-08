@@ -30,10 +30,6 @@ export const MultiSelectedOption = memo(
                 disabled={disabled}
                 onPress={() => (onPressRemove ? onPressRemove(option) : null)}
             >
-                <Image
-                    source={iconSource}
-                    style={{width: 15, height: 15, tintColor: 'red', marginRight: 2}}
-                />
                 <Text
                     numberOfLines={1}
                     style={[
@@ -42,12 +38,17 @@ export const MultiSelectedOption = memo(
                         {
                             color:
                                 StyleSheet.flatten(multiSelectedCustomStyles?.text)?.color ??
-                                COLORS.WHITE,
+                                COLORS.BLACK,
                         },
                     ]}
                 >
                     {option?.label}
                 </Text>
+
+                <Image
+                    source={iconSource}
+                    style={{width: 15, height: 15, marginRight: 2}}
+                />
             </Pressable>
         );
     },
@@ -70,10 +71,10 @@ const styles = StyleSheet.create<Styles>({
         display: 'flex',
         flexDirection: 'row',
         borderRadius: 4,
-        height: 30,
-        backgroundColor: '#2F64FF',
-        marginTop: 10,
-        marginRight: 2,
+        height: 25,
+        backgroundColor: '#E5ECFF',
+        marginTop: 3,
+        marginRight: 3,
         paddingHorizontal: 3,
         paddingLeft: 10,
     },

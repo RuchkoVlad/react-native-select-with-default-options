@@ -33,7 +33,7 @@ type Styles = {
 const styles = StyleSheet.create<Styles>({
     container: {
         flex: 1,
-        height: '100%',
         justifyContent: 'center',
+        flexGrow: 1,
     },
 });
