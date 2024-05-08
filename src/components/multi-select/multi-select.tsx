@@ -1,6 +1,6 @@
 import React from 'react';
 import type { ViewStyle } from 'react-native';
-import { ScrollView, StyleSheet } from 'react-native';
+import {Animated, View, StyleSheet} from 'react-native';
 
 import type { OnPressRemove, OptionType } from '../../types';
 import { MultiSelectedOption } from '../multi-selected-option';
@@ -39,10 +39,10 @@ export const MultiSelect = <T,>({ selectedOptions }: MultiSelectProps<T>) => {
     };
 
     return (
-        <ScrollView scrollEnabled={!disabled} style={styles.container}>
+        <View scrollEnabled={!disabled} style={styles.container}>
             {isSearchable && <SelectInput />}
             {resolveSelectedOptionsList()}
-        </ScrollView>
+        </View>
     );
 };
 
