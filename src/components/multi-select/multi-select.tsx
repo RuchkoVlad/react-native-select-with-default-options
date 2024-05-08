@@ -53,5 +53,10 @@ type Styles = {
 const styles = StyleSheet.create<Styles>({
     container: {
         flex: 1,
+        minWidth: '100%',
+        display: "flex",
+        flexWrap: 'wrap',
+        flexDirection: 'row',
     },
 });
+
