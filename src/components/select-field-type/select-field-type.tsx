@@ -34,6 +34,9 @@ const styles = StyleSheet.create<Styles>({
     container: {
         flex: 1,
         justifyContent: 'center',
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems:'center',
         flexGrow: 1,
     },
 });
